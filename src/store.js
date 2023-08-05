@@ -1,6 +1,12 @@
-import { createStore, applyMiddleware } from "redux";
+// src/store.js
+
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import rootReducer from './reducers';
+import memeReducer from './reducers/memeReducer';
+
+const rootReducer = combineReducers({
+  memes: memeReducer,
+});
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 

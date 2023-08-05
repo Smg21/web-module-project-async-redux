@@ -1,12 +1,18 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './store';
+import MemeList from './components/MemeList';
+import './App.css'; // Add some basic CSS styling for the memes
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Async Redux Project
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>Imgflip Memes</h1>
+        <MemeList />
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
