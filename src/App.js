@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div>
-        <h1>Imgflip Memes</h1>
+        <h1 className='imgflip'>Imgflip Memes</h1>
         <MemeList />
       </div>
     </Provider>
